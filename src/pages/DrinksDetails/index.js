@@ -11,7 +11,7 @@ function DrinksDetails() {
   return (
     <div>
       <span>oi start</span>
-    {/* https://backefront.com.br/como-usar-useparams-react/ tem q fazer por aqui por causa dos testes*/}
+      { /* https://backefront.com.br/como-usar-useparams-react/ tem q fazer por aqui por causa dos testes */ }
     </div>
   );
 }

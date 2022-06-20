@@ -10,7 +10,7 @@ function FoodDetails() {
   return (
     <div>
       <span>oi</span>
-      {/* https://backefront.com.br/como-usar-useparams-react/ tem q fazer por aqui por causa dos testes*/}
+      { /* https://backefront.com.br/como-usar-useparams-react/ tem q fazer por aqui por causa dos testes */ }
     </div>
   );
 }
