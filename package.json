@@ -1,4 +1,5 @@
 {
+  "homepage": "http://fumagallilaura.github.io/recipes-app",
   "name": "recipes-app-test",
   "version": "0.1.0",
   "private": true,
@@ -27,6 +28,8 @@
     "websocket-extensions": ">=0.1.4"
   },
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "cy": "cypress run",
     "cy:open": "cypress open",
     "start": "react-scripts start",
@@ -60,6 +63,7 @@
     "eslint-config-trybe-frontend": "1.2.2",
     "eslint-plugin-react-hooks": "^4.2.0",
     "fs-extra": "^9.0.1",
+    "gh-pages": "^4.0.0",
     "jest": "^27.4.7",
     "mocha": "^8.0.1",
     "mochawesome": "^6.1.1",
