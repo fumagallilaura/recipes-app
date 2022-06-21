@@ -3,7 +3,13 @@ import styled from 'styled-components';
 export const MainContainer = styled.div`
 `;
 
+export const CategoryContainerDefault = styled.div`
+  display: flex;
+  overflow-x: scroll;
+`;
+
 export const CategoryContainer = styled.div`
+  margin-top: 300px;
   display: flex;
   overflow-x: scroll;
 `;

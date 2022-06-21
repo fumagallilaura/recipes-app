@@ -5,6 +5,7 @@ import ButtonContainer from './style';
 
 function LoginButton({ children }) {
   const { test, name, disabled, handleClick, page, loading } = children;
+
   return (
     <>
       <ButtonContainer
@@ -15,7 +16,9 @@ function LoginButton({ children }) {
       >
         { name }
       </ButtonContainer>
-      {loading && <Redirect to={ page } />}
+      {
+        loading && <Redirect to={ page } />
+      }
     </>
 
   );

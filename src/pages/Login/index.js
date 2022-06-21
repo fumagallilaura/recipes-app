@@ -1,8 +1,7 @@
-import React, { useState } from 'react';
-import { Input } from '../../components';
+import React, { useEffect, useState } from 'react';
+import { Input, LoginButton } from '../../components';
 import { LoginContainer, Logo, FormContainer } from './style';
 import logo from '../../assets/images/logo.png';
-import LoginButton from '../../components/LoginButton';
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -10,27 +9,29 @@ function Login() {
   const [disabled, setDisabled] = useState(true);
   const [loading, setLoading] = useState(false);
 
-  const validateTest = () => {
-    const minLength = 6;
-    const verifyEmail = /\S+@\S+\.\S+/;
-    if (password.length >= minLength && verifyEmail.test(email)) {
-      setDisabled(false);
-    } else {
-      setDisabled(true);
-    }
-  };
-
-  const handleChange = ({ target: { type, value } }) => {
+  // https://dev.to/shareef/react-usestate-hook-is-asynchronous-1hia
+  useEffect(() => {
+    const validateTest = () => {
+      const minLength = 6;
+      const verifyEmail = /\S+@\S+\.\S+/;
+      if (password.length > minLength && verifyEmail.test(email)) {
+        setDisabled(false);
+      } else {
+        setDisabled(true);
+      }
+    };
     validateTest();
-    return type === 'email' ? setEmail(value) : setPassword(value);
-  };
+  });
+
+  const handleChange = ({ target: { type, value } }) => (
+    type === 'email' ? setEmail(value) : setPassword(value)
+  );
 
   const submit = () => {
     localStorage.setItem('user', JSON.stringify({ email }));
     localStorage.setItem('mealsToken', 1);
     localStorage.setItem('cocktailsToken', 1);
     setLoading(true);
-    // history.push('/food');
   };
 
   const emailInput = {

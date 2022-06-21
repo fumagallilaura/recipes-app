@@ -14,6 +14,7 @@ import DoneRecipes from './DoneRecipes';
 import FavoriteRecipes from './FavoriteRecipes';
 import FoodDetails from './FoodDetails';
 import DrinksDetails from './DrinksDetails';
+import NotFound from './NotFound';
 
 export {
   Login,
@@ -32,4 +33,5 @@ export {
   FavoriteRecipes,
   FoodDetails,
   DrinksDetails,
+  NotFound,
 };

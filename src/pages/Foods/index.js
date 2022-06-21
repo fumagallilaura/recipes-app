@@ -1,15 +1,18 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { useHistory } from 'react-router-dom';
-import { CategoriesButton, FoodCard } from '../../components';
-import { CategoryContainer, FoodsContainer, MainContainer } from './style';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
+import {
+  MainContainer,
+  CategoryContainerDefault,
+  CategoryContainer,
+  FoodsContainer,
+} from './style';
+import { Header, Footer, CategoriesButton, FoodCard } from '../../components';
 import RecipesContext from '../../context/RecipesContext';
 import { requestCategory } from '../../services';
 
 function Foods() {
   const { foods, categoryOn,
-    setTitle, setBtnSearchIcon } = useContext(RecipesContext);
+    setTitle, setBtnSearchIcon, searchBar } = useContext(RecipesContext);
   const [categories, setCategories] = useState();
   const history = useHistory();
 
@@ -30,23 +33,35 @@ function Foods() {
     setBtnSearchIcon(true);
   }, [setTitle, setBtnSearchIcon]);
 
+  const categoriesRender = () => (
+    categories.map((category, index) => (
+      index < maxCategories && (
+        <CategoriesButton key={ index } category={ category } />
+      )
+    ))
+  );
+
   return (
     <MainContainer>
       <Header />
-      <CategoryContainer>
-        {
-          categories
-          && categories.map((category, index) => (
-            index < maxCategories && (
-              <CategoriesButton key={ index } category={ category } />
-            )
-          ))
-        }
-        {
-          <CategoriesButton category={ { strCategory: 'All' } } />
-        }
-      </CategoryContainer>
-      {/* {console.log(foods) } */}
+      {
+        searchBar
+          ? (
+            <CategoryContainer>
+              { categories && categoriesRender() }
+              {
+                <CategoriesButton category={ { strCategory: 'All' } } />
+              }
+            </CategoryContainer>
+          ) : (
+            <CategoryContainerDefault>
+              { categories && categoriesRender() }
+              {
+                <CategoriesButton category={ { strCategory: 'All' } } />
+              }
+            </CategoryContainerDefault>
+          )
+      }
       <FoodsContainer>
         {
           foods
@@ -60,9 +75,8 @@ function Foods() {
             )
           ))
         }
-        {/* {console.log(categoryOn)} */}
         {
-          (foods.length === 1 && !categoryOn)
+          (foods && foods.length === 1 && !categoryOn)
           && history.push(`/foods/${foods[0].idMeal}`)
         }
       </FoodsContainer>

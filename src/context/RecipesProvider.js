@@ -12,10 +12,12 @@ function RecipesProvider({ children }) {
   const [radio, setRadio] = useState('');
   const [submit, setSubmit] = useState(false);
   const [search, setSearch] = useState('');
-  const [foods, setFoods] = useState([]);
-  const [drinks, setDrinks] = useState([]);
+  const [foods, setFoods] = useState();
+  const [drinks, setDrinks] = useState();
   const [categoryOn, setCategoryOn] = useState(false);
   const [backupCat, setBackupCat] = useState('');
+
+  const [searchBar, setSearchBar] = useState(false);
 
   const setMealsApi = async () => {
     // console.log(radio);
@@ -42,7 +44,7 @@ function RecipesProvider({ children }) {
       setDrinks(response.drinks);
     } else if (radio === 'FirstLetter') {
       const response = await drinkFirstLetterFetch(search);
-      setDrinks(response);
+      setDrinks(response.drinks);
     } else if (radio === 'Name') {
       const response = await drinkNameFetch(search);
       setDrinks(response.drinks);
@@ -101,6 +103,24 @@ function RecipesProvider({ children }) {
     }
   };
 
+  const ingredientsDrinksAPI = async (strIngredient) => {
+    const response = await drinkIngredientFetch(strIngredient);
+    setDrinks(response.drinks);
+  };
+
+  const ingredientsFoodsAPI = async (strIngredient) => {
+    const response = await foodIngredients(strIngredient);
+    setFoods(response.meals);
+  };
+
+  const ingredientHandle = async (strIngredient, type) => {
+    if (type === 'Drinks') {
+      ingredientsDrinksAPI(strIngredient);
+    } else if (type === 'Foods') {
+      ingredientsFoodsAPI(strIngredient);
+    }
+  };
+
   const values = {
     setCategoryOn,
     categoryOn,
@@ -120,6 +140,9 @@ function RecipesProvider({ children }) {
     drinks,
     setDrinks,
     categoryHandle,
+    searchBar,
+    setSearchBar,
+    ingredientHandle,
   };
 
   return (

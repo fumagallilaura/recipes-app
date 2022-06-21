@@ -9,7 +9,8 @@ export const LoginContainer = styled.div`
 `;
 
 export const Logo = styled.img`
-  height: 25%;
+  height: 164px;
+  width: 164px;
   margin-left: 15px;
 `;
 
@@ -26,11 +27,11 @@ export const FormContainer = styled.form`
     outline: none;
     border-radius: 5px;
     padding: 1em;
-    font-family: inherit;
     transition: 0.4s ease-in;
+    margin: 1em;
 
     &:focus {
-      border: 1px solid #961b20;
+      border: 1px solid #97141a;
     }
   }
 
@@ -39,11 +40,10 @@ export const FormContainer = styled.form`
     border: none;
     border-radius: 5px;
     padding: 0.5em;
-    background-color: #e82f3e;
+    background-color: #97141a;
     cursor: pointer;
     color: white;
     transition: 0.4s ease;
-    font-family: inherit;
 
     &:hover {
       transform: scale(1.025);

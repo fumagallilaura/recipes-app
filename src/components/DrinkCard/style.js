@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const DrinkCardContainer = styled.div`
-  width: 100%;
-  margin: 20px 40px;
+  width: 40%;
+  margin: 8px 16px;
   border: none;
-  box-shadow: 5px 5px 5px #cbcbcb;
-  border-radius: 10px;
+  box-shadow: 3px 3px 3px #cbcbcb;
+  border-radius: 5px;
 `;
 
 export const CardButton = styled.button`
@@ -15,18 +15,18 @@ export const CardButton = styled.button`
   align-items: center;
   flex-direction: column;
   border: none;
-  border-radius: 10px;
-  font-family: inherit;
-  font-size: 2.25em;
+  border-radius: 5px;
+  font-size: 1.5em;
 `;
 
 export const CardImage = styled.img`
   width: 100%;
-  border-top-left-radius: 10px;
-  border-top-right-radius: 10px;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
 `;
 
 export const CardTitle = styled.p`
   color: #454545;
-  margin: 10px 0;
+  margin: 5px 0;
+  /* text-align: center; */
 `;

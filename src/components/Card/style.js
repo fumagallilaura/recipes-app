@@ -1,7 +1,13 @@
 import styled from 'styled-components';
 
-const CardContainer = styled.div`
+export const CardContainer = styled.div`
 
 `;
 
-export default CardContainer;
+export const CardImage = styled.img`
+
+`;
+
+export const CardTitle = styled.h1`
+
+`;
