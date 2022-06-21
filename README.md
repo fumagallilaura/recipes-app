@@ -1,12 +1,13 @@
-# Recipes App
-### Para conferir a aplicação em funcionamento, [clique aqui](https://main-group-3--frabjous-cactus-64ff07.netlify.app/)
-<!-- 
+<h1 align="center">Recipes App</h1>
+
+<h3 align="center" >
+  Para conferir a aplicação em funcionamento, <a href="https://main-group-3--frabjous-cactus-64ff07.netlify.app/">clique aqui</a>.
+</h3>
 <div style="width: 1024px">
-  <div style="display: flex">
-    <img src="https://github.com/Matta-012/chef-pedia/blob/main/src/images/login.png" alt="Login page" width="350" height="600px">
-    <img src="https://github.com/Matta-012/chef-pedia/blob/main/src/images/gif-meals-2.gif" alt="Project running gif" width="350" height="600px">
+  <div style="display: flex" align="center">
+    <img src="https://github.com/fumagallilaura/recipes-app/blob/main-group-3/ezgif.com-gif-maker.gif?raw=true" alt="Gif da aplicação" width="350" height="600px">
   </div>
-</div> -->
+</div>
 
 > Recipes App é uma aplicação web responsiva onde o usuário pode pesquisar receitas e drinks, iniciar uma receita ou drink, favoritar, compartilhar o link com os amigos e até ver um vídeo demonstrativo de como fazer a receita.
 ### ⚙️ Ajustes e melhorias
