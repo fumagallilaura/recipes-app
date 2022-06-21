@@ -113,7 +113,6 @@ Este projeto foi desenvolvido durante o curso de formação web fullstack da [Tr
   <details>
     <summary>Tela de Login</summary>
 
-    <!-- - [Tela de login](#tela-de-login) -->
     - A pessoa deve conseguir escrever seu email no input de email;
     - A pessoa deve conseguir escrever sua senha no input de senha;
     - O formulário só seja válido após um email válido e uma senha de mais de 6 caracteres serem preenchidos;
@@ -133,7 +132,6 @@ Este projeto foi desenvolvido durante o curso de formação web fullstack da [Tr
   <details>
     <summary>Barra de busca</summary>
 
-    <!-- - [Barra de busca - Header](#barra-de-busca---header) -->
     - A barra é posicionada logo abaixo do header e foram implementados 3 radio buttons: Ingrediente, Nome e Primeira letra;
     - A busca é feita na API de comidas caso a pessoa esteja na página de comidas e na de bebidas caso esteja na de bebidas;
     - Caso apenas uma receita seja encontrada, a pessoa é redirecionada para a tela de detalhes da receita, com o ID da mesma na URL;
