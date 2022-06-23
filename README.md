@@ -5,7 +5,7 @@
 </h3>
 <div style="width: 1024px">
   <div style="display: flex" align="center">
-    <img src="https://github.com/fumagallilaura/recipes-app/blob/main-group-3/ezgif.com-gif-maker.gif?raw=true" alt="Gif da aplicação" width="350" height="600px">
+    <img src="https://github.com/fumagallilaura/recipes-app/blob/main-group-3/ezgif.com-gif-maker.gif?raw=true" alt="Gif da aplicação" width="350px" height="500px">
   </div>
 </div>
 
